@@ -16,6 +16,18 @@ section {
     background: #21283a;
     overflow-x: hidden;
 }
+section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background: #1de5ff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #1de5ff, 0 0 50px #1de5ff, 0 0 150px #1de5ff;
+}
 header {
     position: fixed;
     top: 0;
@@ -34,4 +46,23 @@ header .logo {
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
+}
+header .logo span {
+    color: #1de5ff;
+    border-bottom: 4px solid #1de5ff;
+}
+header .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+}
+.girl {
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    width: 550px;
 }
