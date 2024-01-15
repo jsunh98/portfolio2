@@ -26,7 +26,14 @@ section::before {
     height: 500px;
     background: #1de5ff;
     border-radius: 50%;
-    box-shadow: 0 0 20px #1de5ff, 0 0 50px #1de5ff, 0 0 150px #1de5ff;
+    box-shadow: 0 0 20px #1de5ff, 
+    0 0 50px #1de5ff, 
+    0 0 150px #1de5ff;
+    transition: 1.3s;
+}
+section.active::before {
+    background: #21283a;
+    box-shadow: 0 0 0 1200px #141821;
 }
 header {
     position: fixed;
@@ -56,6 +63,12 @@ header .toggle {
     width: 30px;
     height: 30px;
     background: url(images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+}
+header .toggle.active {
+    background: url(images/close.png);
     background-repeat: no-repeat;
     background-size: 30px;
     cursor: pointer;
