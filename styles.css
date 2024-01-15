@@ -29,7 +29,7 @@ section::before {
     box-shadow: 0 0 20px #1de5ff, 
     0 0 50px #1de5ff, 
     0 0 150px #1de5ff;
-    transition: 1.3s;
+    transition: 1s;
 }
 section.active::before {
     background: #21283a;
@@ -53,6 +53,8 @@ header .logo {
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
+    transition: 0.5s;
+    transform-origin: left;
 }
 header .logo span {
     color: #1de5ff;
@@ -78,4 +80,103 @@ header .toggle.active {
     bottom: 0;
     right: 80px;
     width: 550px;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    transform-origin: left;
+}
+.content .contentBx {
+    position: relative;
+    max-width: 600px;
+    z-index: 100;
+}
+.content .contentBx h4 {
+    font-weight: 400;
+    color: #1de5ff;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.content .contentBx h2 {
+    font-size: 4em;
+    line-height: 1em;
+    color: #fff;
+}
+.content .contentBx h3 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+.content .contentBx p {
+    font-size: 1em;
+    color: #fff;
+    margin: 10px 0 20px;
+}
+.content .contentBx a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #1de5ff;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.content .contentBx a:last-child {
+    background: #1de5ff;
+    color: #111;
+}
+.content .contentBx a:hover {
+    box-shadow: 0 0 15px #1de5ff, 
+    0 0 40px #1de5ff;
+}
+.sci {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    transition: 0.5s;
+    transform-origin: left;
+}
+.sci li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+}
+.sci li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.sci li:hover a {
+    background: #fff;
+}
+.sci li a img {
+    filter: invert(1);
+    transform: scale(0.6);
+}
+.sci li:hover a img {
+    filter: invert(0);
+}
+section.active .logo , 
+section.active .content , 
+section.active .sci {
+    transform: scale(0);
 }
